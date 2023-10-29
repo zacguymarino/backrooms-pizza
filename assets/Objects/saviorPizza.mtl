@@ -1,0 +1,45 @@
+# Blender 3.6.5 MTL File: 'saviorPizza.blend'
+# www.blender.org
+
+newmtl Cheese
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/Cheese/Cheese_Color.jpg
+map_Ns C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/Cheese/Cheese_Roughness.jpg
+map_Bump -bm 1.000000 C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/Cheese/Cheese_Normal.jpg
+
+newmtl Crust
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.687321 0.227822 0.018626
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Pepperoni
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.492268 0.005637 0.009336
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Table
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/MetalDirectionalScrape001/MetalDirectionalScrape001_COL_VAR1_2K.jpg
+map_refl C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/MetalDirectionalScrape001/MetalDirectionalScrape001_METALNESS_2K.jpg
+map_Bump -bm 1.000000 C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/MetalDirectionalScrape001/MetalDirectionalScrape001_NRM_2K.jpg

@@ -1,0 +1,43 @@
+# Blender 3.6.5 MTL File: 'pizzaMonster.blend'
+# www.blender.org
+
+newmtl Black
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Crust
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.183726 0.020003
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Pepperoni
+Ns 62.500000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.012710 0.025881
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Pie
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/Cheese/Cheese_Color.jpg
+map_Ns C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/Cheese/Cheese_Roughness.jpg
+map_Bump -bm 1.000000 C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/Cheese/Cheese_Normal.jpg

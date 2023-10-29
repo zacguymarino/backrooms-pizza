@@ -1,0 +1,15 @@
+# This is an Asset Catalog Definition file for Blender.
+#
+# Empty lines and lines starting with `#` will be ignored.
+# The first non-ignored line should be the version indicator.
+# Other lines are of the format "UUID:catalog/path/for/assets:simple catalog name"
+
+VERSION 1
+
+be2dba9b-c8e0-4b06-b2ad-011878510416:Textures:Textures
+f22fbfd2-f0f7-44a0-bb36-c3368d9dd222:Textures/Fabric:Fabric
+4dc3259e-6309-4adb-9099-c4dafe8579f8:Textures/Fabric/Carpet:Carpet
+4bed5cf6-6838-4791-9468-df0cca91915c:Textures/Plaster:Plaster
+8a7b7836-ab33-416d-9357-3044f12ba762:Textures/Plaster/Drywall:Drywall
+2dd54f9a-61cd-4172-b670-a1fee73d0350:Textures/Plaster/Painted:Painted
+940935f6-431b-4b65-ba6e-e68f8e2286f8:Textures/Plastic:Plastic

@@ -1,0 +1,62 @@
+# Blender 3.6.5 MTL File: 'room2.blend'
+# www.blender.org
+
+newmtl Carpet
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/FabricCarpetPatchy001/FabricCarpetPatchy001_COL_2K.jpg
+
+newmtl Ceiling
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/PanelsAcousticWhiteTiles001/PanelsAcousticWhiteTiles001_COL_2K.jpg
+
+newmtl Column
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/DrywallPopcornTexture001/DrywallPopcornTexture001_COL_VAR1_2K.jpg
+
+newmtl ColumnCap
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/PlasterLime002/PlasterLime002_COL_2K.jpg
+
+newmtl Light
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 1.000000 0.922693 0.488961
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Wallpaper
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/nicra/Desktop/Backrooms/backrooms/assets/Textures/Backrooms_Wallpaper/backrooms_wallpaper.jpg
