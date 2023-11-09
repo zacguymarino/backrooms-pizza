@@ -94,6 +94,7 @@ async function init() {
 	playerMesh = new THREE.Mesh(
 		new THREE.BoxGeometry(0.5, 2, 0.5), 
 		new THREE.MeshNormalMaterial() );
+	playerMesh.visible = false;
 	playerMesh.name = "playerMesh";
 
 	room1 = new THREE.Object3D();
@@ -260,8 +261,13 @@ async function init() {
 	for (let i = 0; i < unusedRooms.length; i++) {
 		scene.remove(unusedRooms[i].scene);
 	}
+
+	//Add scenes and set visibility to false of limbo objects
+	pizzaMonster.scene.visible = false;
 	scene.add(pizzaMonster.scene);
+	spotlight.visible = false;
 	scene.add(spotlight);
+	saviorPizza.scene.visible = false;
 	scene.add(saviorPizza.scene);
 	scene.add(saviorMesh);
 	scene.add(playerMesh);
@@ -269,6 +275,7 @@ async function init() {
 		scene.add(currentRooms[i].scene);
 	}
 	for (let i = 0; i < unusedRooms.length; i++) {
+		unusedRooms[i].scene.visible = false;
 		scene.add(unusedRooms[i].scene);
 	}
 
@@ -415,6 +422,8 @@ function onKeyDown(event) {
 		pizzaLocation.x > eastBound +25.3 ||
 		pizzaLocation.x < westBound) {
 			saviorIsLimbo = true;
+			saviorPizza.scene.visible = false;
+			spotlight.visible = false;
 			saviorPizza.scene.position.copy(limbo);
 			spotlight.position.copy(limbo);
 			saviorMesh.position.copy(limbo);
@@ -431,6 +440,8 @@ function onKeyDown(event) {
 		}
 		pizzaPosition = currentRooms[randRoom].scene.getObjectByName("Spawn").localToWorld(pizzaVector);
 		pizzaPosition.y = 0;
+		saviorPizza.scene.visible = true;
+		spotlight.visible = true;
 		saviorPizza.scene.position.copy(pizzaPosition);
 		saviorMesh.position.copy(pizzaPosition);
 		saviorMesh.position.y = 1.5;
@@ -454,6 +465,7 @@ function onKeyDown(event) {
 		pizzaLocation.x > eastBound +25.3 ||
 		pizzaLocation.x < westBound) {
 			monsterIsLimbo = true;
+			pizzaMonster.scene.visible = false;
 			pizzaMonster.scene.position.copy(limbo);
 	}
 	let max = 2;
@@ -468,6 +480,7 @@ function onKeyDown(event) {
 		}
 		pizzaPosition = currentRooms[randRoom].scene.getObjectByName("Spawn").localToWorld(pizzaVector);
 		pizzaPosition.y = 1.65;
+		pizzaMonster.scene.visible = true;
 		pizzaMonster.scene.position.copy(pizzaPosition);
 		monsterIsLimbo = false;
 	} else {
@@ -488,6 +501,7 @@ function updateRooms(direction) {
 			goners = currentRooms.splice(6,3);
 			for (let i = 0; i < goners.length; i++) {
 				unusedRooms.push(goners[i]);
+				goners[i].scene.visible = false;
 				goners[i].scene.position.copy(limbo);
 			}
 			newZ = oldZ - (25.6*3);
@@ -495,6 +509,7 @@ function updateRooms(direction) {
 				let room = Math.floor(Math.random() * unusedRooms.length);
 				let location = new THREE.Vector3(oldX + (i*25.6), 0, newZ);
 				unusedRooms[room].scene.position.copy(location);
+				unusedRooms[room].scene.visible = true;
 				currentRooms.unshift(unusedRooms.splice(room,1)[0]);
 			}
 			break;
@@ -505,6 +520,7 @@ function updateRooms(direction) {
 			goners = currentRooms.splice(0,3);
 			for (let i = 0; i < goners.length; i++) {
 				unusedRooms.push(goners[i]);
+				goners[i].scene.visible = false;
 				goners[i].scene.position.copy(limbo);
 			}
 			newZ = oldZ + (25.6*3);
@@ -512,6 +528,7 @@ function updateRooms(direction) {
 				let room = Math.floor(Math.random() * unusedRooms.length);
 				let location = new THREE.Vector3(oldX + (i*25.6), 0, newZ);
 				unusedRooms[room].scene.position.copy(location);
+				unusedRooms[room].scene.visible = true;
 				currentRooms.push(unusedRooms.splice(room,1)[0]);
 			}
 			break;
@@ -520,16 +537,20 @@ function updateRooms(direction) {
 			oldZ = currentRooms[0].scene.position.z;
 			oldX = currentRooms[0].scene.position.x;
 			unusedRooms.push(currentRooms.splice(6,1)[0]);
+			unusedRooms[unusedRooms.length - 1].scene.visible = false;
 			unusedRooms[unusedRooms.length - 1].scene.position.copy(limbo);
 			unusedRooms.push(currentRooms.splice(3,1)[0]);
+			unusedRooms[unusedRooms.length - 1].scene.visible = false;
 			unusedRooms[unusedRooms.length - 1].scene.position.copy(limbo);
 			unusedRooms.push(currentRooms.splice(0,1)[0]);
+			unusedRooms[unusedRooms.length - 1].scene.visible = false;
 			unusedRooms[unusedRooms.length - 1].scene.position.copy(limbo);
 			newX = oldX + (25.6*3);
 			for (let i = 0; i < 3; i++) {
 				let room = Math.floor(Math.random() * unusedRooms.length);
 				let location = new THREE.Vector3(newX, 0, oldZ + (i*25.6));
 				unusedRooms[room].scene.position.copy(location);
+				unusedRooms[room].scene.visible = true;
 				switch(i) {
 					case 0:
 						currentRooms.splice(2, 0, unusedRooms.splice(room, 1)[0]);
@@ -548,16 +569,20 @@ function updateRooms(direction) {
 			oldZ = currentRooms[2].scene.position.z;
 			oldX = currentRooms[2].scene.position.x;
 			unusedRooms.push(currentRooms.splice(8,1)[0]);
+			unusedRooms[unusedRooms.length - 1].scene.visible = false;
 			unusedRooms[unusedRooms.length - 1].scene.position.copy(limbo);
 			unusedRooms.push(currentRooms.splice(5,1)[0]);
+			unusedRooms[unusedRooms.length - 1].scene.visible = false;
 			unusedRooms[unusedRooms.length - 1].scene.position.copy(limbo);
 			unusedRooms.push(currentRooms.splice(2,1)[0]);
+			unusedRooms[unusedRooms.length - 1].scene.visible = false;
 			unusedRooms[unusedRooms.length - 1].scene.position.copy(limbo);
 			newX = oldX - (25.6*3);
 			for (let i = 0; i < 3; i++) {
 				let room = Math.floor(Math.random() * unusedRooms.length);
 				let location = new THREE.Vector3(newX, 0, oldZ + (i*25.6));
 				unusedRooms[room].scene.position.copy(location);
+				unusedRooms[room].scene.visible = true;
 				switch(i) {
 					case 0:
 						currentRooms.splice(0, 0, unusedRooms.splice(room, 1)[0]);
