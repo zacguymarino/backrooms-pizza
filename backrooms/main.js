@@ -428,7 +428,7 @@ function onKeyDown(event) {
 			spotlight.position.copy(limbo);
 			saviorMesh.position.copy(limbo);
 	}
-	let max = 3;
+	let max = 4;
 	let min = 1;
 	let randInt = Math.floor(Math.random() * (max - min + 1)) + min;
 	if (randInt == 1 && saviorIsLimbo) {
@@ -468,7 +468,7 @@ function onKeyDown(event) {
 			pizzaMonster.scene.visible = false;
 			pizzaMonster.scene.position.copy(limbo);
 	}
-	let max = 2;
+	let max = 3;
 	let min = 1;
 	let randInt = Math.floor(Math.random() * (max - min + 1)) + min;
 	if (randInt == 1 && monsterIsLimbo) {
